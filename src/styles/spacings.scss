@@ -1,0 +1,80 @@
+$spacing_0: 0;
+$spacing_8: 8;
+$spacing_16: 16;
+$spacing_32: 32;
+$spacing_48: 48;
+$spacing_64: 64;
+$spacing_80: 80;
+
+$spaceamounts: (
+  $spacing_0
+  $spacing_8
+  $spacing_16
+  $spacing_32
+  $spacing_48
+  $spacing_64
+  $spacing_80
+);
+
+
+@each $space in $spaceamounts {
+  .m-#{$space} {
+    margin: #{$space}px;
+  }
+
+  .m-t-#{$space} {
+    margin-top: #{$space}px;
+  }
+
+  .m-b-#{$space} {
+    margin-bottom: #{$space}px;
+  }
+
+  .m-l-#{$space} {
+    margin-left: #{$space}px;
+  }
+
+  .m-r-#{$space} {
+    margin-right: #{$space}px;
+  }
+
+  .m-x-#{$space} {
+    margin-left: #{$space}px;
+    margin-right: #{$space}px;
+  }
+
+  .m-y-#{$space} {
+    margin-top: #{$space}px;
+    margin-bottom: #{$space}px;
+  }
+
+  .p-#{$space} {
+    padding: #{$space}px;
+  }
+
+  .p-t-#{$space} {
+    padding-top: #{$space}px;
+  }
+
+  .p-b-#{$space} {
+    padding-bottom: #{$space}px;
+  }
+
+  .p-l-#{$space} {
+    padding-left: #{$space}px;
+  }
+
+  .p-r-#{$space} {
+    padding-right: #{$space}px;
+  }
+
+  .p-x-#{$space} {
+    padding-left: #{$space}px;
+    padding-right: #{$space}px;
+  }
+
+  .p-y-#{$space} {
+    padding-top: #{$space}px;
+    padding-bottom: #{$space}px;
+  }
+}
