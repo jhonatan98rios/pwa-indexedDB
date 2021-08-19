@@ -9,11 +9,21 @@ export async function getData() {
 }
 
 export async function setData(data) {
+
+
+
   if(data) {
     const json = JSON.stringify(data)
-    return await set(key, json)
-  } else {
-    throw Error('Dado inválido')
+
+    try {
+      await set(key, json)
+
+    } catch (err) {
+      throw Error('Dado inválido')
+
+    } finally { 
+      console.log('Done')
+    }
   }
 }
 

@@ -1,6 +1,5 @@
 //import logo from './logo.svg';
 import React, { useEffect, useState } from 'react'
-import InstallPWA from './components/InstallPWA'
 import { getData, setData } from './utils/storage'
 import { networkStatus } from './utils/network'
 
@@ -11,7 +10,7 @@ function App() {
   const [array, setArray] = useState(null)
 
   async function addItem() {
-    let newData = 'Eu sou uma batata 1'
+    let newData = 'Eu sou uma batata'
 
     setArray([
       ...array,
@@ -22,15 +21,7 @@ function App() {
   useEffect(() => {
 
     ;(async () => {
-      try {
-        await setData(array)
-
-      } catch (error) {
-        console.log(error)
-  
-      } finally { 
-        console.log('Done')
-      }
+      await setData(array)
     })();
     
   }, [array])
@@ -64,7 +55,6 @@ function App() {
         >
           Batata
         </button>
-        <InstallPWA />
       </main>
     </div>
   );
