@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import { set, get } from 'idb-keyval';
+import installPWA from '../src/components/installPWA.js'
 
 function App() {
 
@@ -27,6 +28,8 @@ function App() {
       <main>
 
         <h2> {data} </h2>
+
+        <installPWA />
 
       </main>
     </div>
